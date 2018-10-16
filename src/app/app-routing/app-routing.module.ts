@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from '../home/home.component';
-import{ AboutMeComponent } from '../about-me/about-me.component';
+import { AboutMeComponent } from '../about-me/about-me.component';
 import { HobbiesComponent } from '../hobbies/hobbies.component';
 import { HobbiesHomeComponent} from '../hobbies-home/hobbies-home.component';
 import { PianoComponent } from '../piano/piano.component';
-import  { GamingComponent } from '../gaming/gaming.component';
+import { GamingComponent } from '../gaming/gaming.component';
 import {CodingComponent} from '../coding/coding.component';
 import {GifComponent} from '../gif/gif.component';
-import { ContactComponent } from '../contact/contact.component';;
+import { ContactComponent } from '../contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +35,7 @@ const routes: Routes = [
         component: GamingComponent
       }
      ]
-   }, 
+   },
    { path: 'gif', component: GifComponent },
   { path: 'contact', component: ContactComponent }
 ];
@@ -48,4 +48,12 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutMeComponent, HobbiesComponent, PianoComponent, GamingComponent, CodingComponent, ContactComponent] // this is a clean way of exporting all the components used in routing
+export const routingComponents = [  // this is a clean way of exporting all the components used in routing
+HomeComponent,
+AboutMeComponent,
+HobbiesComponent,
+PianoComponent,
+GamingComponent,
+CodingComponent,
+ContactComponent
+];
