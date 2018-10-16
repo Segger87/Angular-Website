@@ -1,9 +1,9 @@
 <div class="giphy-body">
-<h1>Top 10 Trending GIF's</h1>
+<h1 [@routerTransition]>Top 10 Trending GIF's</h1>
 
 <ng-container *ngIf="gif">
 
-    <div id="giphy-container" >
+    <div id="giphy-container" [@routerTransitionRight]>
       <ng-container *ngFor= "let gd of gif.data">
             <div class="giphy-posts">
                 <img class="giphy-img" [src]="gd.images.downsized.url" >

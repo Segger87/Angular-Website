@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AppRoutingModule, routingComponents} from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -12,14 +13,15 @@ import { HobbiesHomeComponent } from './hobbies-home/hobbies-home.component';
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    routingComponents,
+    routingComponents, // see app-routing module
     GifComponent,
-    HobbiesHomeComponent // see app-routing module
+    HobbiesHomeComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

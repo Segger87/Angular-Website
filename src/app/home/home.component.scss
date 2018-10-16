@@ -1,5 +1,12 @@
-h1{
+@import "src/variables.scss";
+
+.home-page-title{
     text-align: center;
-    margin-top: 15%;
     font-size: 5em;
+    padding-top: 15%;
+}
+
+.home-wrapper {
+    background: $home-background-color;
+    height: 100vh;
 }

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { GifService } from '../gif.service';
 import { IGif } from '../gif';
+import { slideToRight } from '../router.animations';
+import { slideToLeft } from '../router.animations';
 
 @Component({
   selector: 'app-gif',
   templateUrl: './gif.component.html',
-  styleUrls: ['./gif.component.scss']
+  styleUrls: ['./gif.component.scss'],
+  animations: [slideToLeft(), slideToRight()]
 })
 export class GifComponent implements OnInit {
 
