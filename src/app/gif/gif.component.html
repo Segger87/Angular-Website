@@ -1,3 +1,9 @@
-<p>
-  gif works!
-</p>
+<h1>Top 10 Trending GIF's</h1>
+
+<ng-container *ngIf="gif" class="giphy-body">
+	<ng-container id="giphy-container" *ngFor= "let gd of gif.data">
+    <div class="giphy-posts">
+        <img [src]="gd.images.downsized.url" >
+    </div>
+	</ng-container>
+</ng-container>
