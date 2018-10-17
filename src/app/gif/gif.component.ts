@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GifService } from '../gif.service';
-import { IGif } from '../gif';
+import { IGif } from '../interfaces/gif';
 import { slideToRight } from '../router.animations';
 import { slideToLeft } from '../router.animations';
 

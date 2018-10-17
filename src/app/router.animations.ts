@@ -4,23 +4,23 @@ style,
 transition,
 trigger } from '@angular/animations';
 
-export function routerTransition(){
+export function routerTransition() {
     return slideToLeft();
 }
 
-export function routerTransitionRight(){
+export function routerTransitionRight() {
     return slideToRight();
 }
 
-export function routerTransitionDown(){
+export function routerTransitionDown() {
     return slideToBottom();
 }
 
-export function routerTransitionUp(){
+export function routerTransitionUp() {
     return slideToTop();
 }
 
-export function slideToLeft(){
+export function slideToLeft() {
     return trigger('routerTransition', [
         state('void', style({})),
         state('*', style({})),
@@ -35,7 +35,7 @@ export function slideToLeft(){
     ]);
 }
 
-    export function slideToRight(){
+    export function slideToRight() {
         return trigger('routerTransitionRight', [
             state('void', style({})),
             state('*', style({})),
@@ -50,7 +50,7 @@ export function slideToLeft(){
         ]);
     }
 
-    export function slideToBottom(){
+    export function slideToBottom() {
         return trigger('routerTransitionDown', [
             state('void', style({})),
             state('*', style({})),
@@ -65,7 +65,7 @@ export function slideToLeft(){
         ]);
     }
 
-        export function slideToTop(){
+        export function slideToTop() {
             return trigger('routerTransitionUp', [
                 state('void', style({})),
                 state('*', style({})),
@@ -79,4 +79,4 @@ export function slideToLeft(){
             ])
             ]);
         }
-    
+

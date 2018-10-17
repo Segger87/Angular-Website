@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { slideToBottom } from '../router.animations';
+import { slideToBottom, slideToTop } from '../router.animations';
 
 @Component({
   selector: 'app-piano',
   templateUrl: './piano.component.html',
   styleUrls: ['./piano.component.scss'],
-  animations: [slideToBottom()]
+  animations: [slideToBottom(), slideToTop()]
 })
 export class PianoComponent implements OnInit {
 

@@ -1,6 +1,8 @@
-<div [@routerTransitionDown] class="piano-wrapper">
-	<h1>Piano</h1>
-				<div class="accordion" id="accordionExample">
+<div class="piano-wrapper">
+
+	<h1 [@routerTransitionDown]>Piano</h1>
+	<div [@routerTransitionUp]>
+			<div class="accordion" id="accordionExample">
 					<div class="card card-image1">
 						<div class="card-header" id="headingOne">
 							<h5 class="mb-0">
@@ -10,8 +12,8 @@
 							</h5>
 						</div>
 						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-							<div class="card-body">
-								<iframe width="560" height="400" src="https://www.youtube.com/embed/Qffn_88Lsvo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="card-body embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Qffn_88Lsvo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
@@ -25,8 +27,8 @@
 							</h5>
 						</div>
 						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-							<div class="card-body">
-								<iframe width="560" height="400" src="https://www.youtube.com/embed/6TruE3rsgvg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="card-body embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6TruE3rsgvg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
@@ -40,9 +42,26 @@
 							</h5>
 						</div>
 						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-							<div class="card-body">
-								<iframe width="560" height="400" src="https://www.youtube.com/embed/bgllE7KwYOs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="card-body embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bgllE7KwYOs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
-				</div>
+
+					<div class="card card-image4">
+							<div class="card-header" id="headingFour">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+										Rachmaninoff - Prelude in C# Minor
+									</button>
+								</h5>
+							</div>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+								<div class="card-body embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UWcm7AGAgzM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+	</div>
+				
+</div>
