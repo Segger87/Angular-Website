@@ -15,7 +15,7 @@ import { HobbiesHomeComponent } from './hobbies-home/hobbies-home.component';
     NavigationBarComponent,
     routingComponents, // see app-routing module
     GifComponent,
-    HobbiesHomeComponent 
+    HobbiesHomeComponent,
   ],
   imports: [
     BrowserModule,
