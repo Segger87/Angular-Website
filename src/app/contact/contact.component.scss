@@ -1,0 +1,31 @@
+@import "src/variables.scss";
+
+h1{
+    padding-top: 5%;
+    font-size: 5em;
+}
+
+.contact-wrapper{
+    background-color: $contact-background-color;
+    height: 100vh;
+    text-align: center;
+}
+
+.fa-github, .fa-facebook-square, .fa-linkedin-square {
+    font-size: 5.5em;
+    margin: .125em;
+    padding-top: 10%;
+
+	&:hover {
+		opacity: 0.2;
+	}
+}
+
+.social-media {
+	all: unset;
+
+	&:hover {
+		all: unset;
+		cursor: pointer;
+	}
+}
