@@ -1,11 +1,4 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 import { slideToLeft } from '../router.animations';
 
 @Component({

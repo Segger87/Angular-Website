@@ -1,26 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { GifService } from '../gif.service';
-import { IGif } from '../interfaces/gif';
 import { slideToRight } from '../router.animations';
 import { slideToLeft } from '../router.animations';
 
 @Component({
-  selector: 'app-gif',
-  templateUrl: './gif.component.html',
-  styleUrls: ['./gif.component.scss'],
-  animations: [slideToLeft(), slideToRight()]
+ selector: 'app-gif',
+ templateUrl: './gif.component.html',
+ styleUrls: ['./gif.component.scss'],
+ animations: [slideToLeft(), slideToRight()]
 })
 export class GifComponent implements OnInit {
 
-  private gif: IGif;
+ private urls: string[];
 
-  constructor(private _gifService: GifService) { }
+ constructor(private _gifService: GifService) { }
 
-  ngOnInit() {
-    this._gifService.retrieveGifData().subscribe(data => {
-      this.gif = data;
-      console.log(this.gif.data);
-    });
-  }
-
+ ngOnInit() {
+   if(this.urls && this.urls.length >= 1){
+     return;
+   }
+     this._gifService.retrieveGifData().subscribe(json => {
+     this.urls = [];
+     json.data.forEach(datum => {
+       this.urls.push(datum.images.downsized.url);
+       console.log(this.urls);
+     });
+   });
+ }
 }

@@ -8,5 +8,24 @@
 
 h1 {
     font-size: 5em;
-    padding-top: 20%;
+    padding-top: 10%;
+}
+
+.fa-music, .fa-code, .fa-gamepad{
+    font-size: 5.5em;
+    margin: .125em;
+    padding-top: 5%;
+
+	&:hover {
+		opacity: 0.2;
+	}
+}
+
+.hobbies {
+	all: unset;
+
+	&:hover {
+		all: unset;
+		cursor: pointer;
+	}
 }

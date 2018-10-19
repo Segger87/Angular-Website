@@ -1,6 +1,7 @@
 #giphy-container {
 	display: flex;
 	flex-flow: row wrap;
+	padding-top: 3%;
 }
 
 .giphy {
@@ -25,4 +26,14 @@
 h1 {
     text-align: center;
     font-size: 2em;
+}
+
+@media(max-width: 690px){
+	.giphy-posts{
+		width: 100%;
+	}
+	h1 {
+		text-align: center;
+		font-size: 1.5em;
+	}
 }

@@ -1,17 +1,20 @@
 @import "src/variables.scss";
 
+*{
+    background-color: $hobbies-background-color;
+}
+
 .coding
 {   
     &-wrapper {
-    background-color: $hobbies-background-color;
     height: 100vh;
     text-align: center;
     }
     &-languages {
-        font-size: 2em;
+        font-size: 1.75em;
     }
     &-content{
-        padding-top: 5%;
+        padding-top: 2%;
     }
 }
 

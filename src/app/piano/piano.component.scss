@@ -10,5 +10,13 @@ h1{
     font-size: 5em;
     padding-top: 5%;
     padding-bottom: 5%;
+}
 
+.collapsed {
+    background-color: lighten($accordian-card-color, 7%);
+    border: solid white 1px;
+}
+
+.card-header {
+    background-color: lighten($accordian-card-color, 10%);
 }
