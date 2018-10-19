@@ -7,7 +7,8 @@ import { slideToLeft } from '../router.animations';
  selector: 'app-gif',
  templateUrl: './gif.component.html',
  styleUrls: ['./gif.component.scss'],
- animations: [slideToLeft(), slideToRight()]
+ animations: [slideToLeft(), 
+  slideToRight()]
 })
 export class GifComponent implements OnInit {
 
