@@ -1,8 +1,6 @@
 @import "src/variables.scss";
 
-*{
-    background-color: $hobbies-background-color;
-}
+
 
 .coding
 {   
@@ -16,12 +14,75 @@
     &-content{
         padding-top: 2%;
     }
+    &-projects{
+        font-size: 1.75em;
+    }
 }
+
 
 li{
     list-style: none;
+    text-align: left;
 }
     
 h1 {
     font-size: 4em;
+}
+
+.languages {
+    background: lighten(pink, 10%);
+    border: solid white 5px;
+    border-radius: 2%;
+
+    &-title{
+        background: lighten(pink, 5%);
+        padding-bottom: 2%;
+    }
+}
+
+.projects {
+    background: lighten(pink, 10%);
+    border: solid white 5px;
+    border-radius: 2%;
+
+    &-title{
+        background: lighten(pink, 5%);
+        padding-bottom: 2%;
+    }
+}
+
+.languages-projects-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fa-puzzle-piece, .fa-filter, .fa-search, .fa-reddit-alien {
+    margin: .125em;
+}
+
+
+a {
+	all: unset;
+
+	&:hover {
+		all: unset;
+        cursor: pointer;
+        opacity: 0.2;
+	}
+}
+
+@media(min-width: 580px){
+    li{
+        text-align: center;
+    }
+
+    .languages-projects-wrapper{
+        flex-direction: row;
+    }
+
+    .projects, .languages {
+       width: 50%;
+    }
+        
 }

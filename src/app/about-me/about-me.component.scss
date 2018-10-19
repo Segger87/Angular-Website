@@ -2,16 +2,25 @@
 
 h1{
     text-align: center;
-    padding-top: 5%;
-    font-size: 5em;
+    padding-top: 1%;
+    font-size: 4em;
 }
 
 .about-me-wrapper{
     background-color: $about-me-background-color;
-    height: 100vh;
+    height: 105vh;
     text-align: center;
 }
 
-h3 {
-    padding-top: 10%;
+p {
+    padding-top: 1%;
+    font-size: 1.5em;
+    background-color: $about-me-background-color;
+    letter-spacing: -.004em;
+}
+
+img{
+    height: 40%;
+    border: solid white 2px;
+    border-radius: 50%;
 }

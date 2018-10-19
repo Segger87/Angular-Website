@@ -11,19 +11,15 @@ import { slideToLeft } from '../router.animations';
 })
 export class GifComponent implements OnInit {
 
- private urls: string[];
+ public urls: string[];
 
  constructor(private _gifService: GifService) { }
 
  ngOnInit() {
-   if(this.urls && this.urls.length >= 1){
-     return;
-   }
      this._gifService.retrieveGifData().subscribe(json => {
      this.urls = [];
      json.data.forEach(datum => {
        this.urls.push(datum.images.downsized.url);
-       console.log(this.urls);
      });
    });
  }

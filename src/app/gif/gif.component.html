@@ -1,14 +1,18 @@
 <div class="giphy-body">
 <h1 [@routerTransition]>Top 10 Trending GIF's</h1>
 
-<ng-container *ngIf="urls">
-    <div id="giphy-container" [@routerTransitionRight]>
-      <ng-container *ngFor= "let url of urls">
-            <div class="giphy-posts">
-                <img class="giphy-img" [src]="url" >
-            </div>
+    <ng-container *ngIf="urls">
+        <div id="giphy-container" [@routerTransitionRight]>
+        <ng-container *ngFor= "let url of urls">
+                <div class="giphy-posts">
+                    <img class="giphy-img" [src]="url" >
+                </div>
         </ng-container>
-      </div>
-      </ng-container>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="!urls">
+        <p>Loading...</p>
+    </ng-container>
   </div>
 	

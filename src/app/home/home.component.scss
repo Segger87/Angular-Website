@@ -1,7 +1,6 @@
 @import "src/variables.scss";
 
 .home-page-title{
-    text-align: center;
     font-size: 5em;
     padding-top: 15%;
 }
@@ -9,4 +8,5 @@
 .home-wrapper {
     background: $home-background-color;
     height: 100vh;
+    text-align: center;
 }
