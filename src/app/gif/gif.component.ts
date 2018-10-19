@@ -16,32 +16,30 @@ export class GifComponent implements OnInit {
  constructor(private _gifService: GifService) { }
 
  ngOnInit() {
-  let setInLocalStorage = this.getStorage();
+  const setInLocalStorage = this.getStorage();
 
-  if(setInLocalStorage.length == 0){
+  if (setInLocalStorage.length == 0) {
     this._gifService.retrieveGifData().subscribe(json => {
       this.urls = [];
       json.data.forEach(datum => {
         this.urls.push(datum.images.downsized.url);
- 
         setInLocalStorage.push(datum.images.downsized.url);
- 
         this.setStorage(setInLocalStorage);
-        console.log("set");
+        console.log('set');
       });
     });
-  }else{
+  } else {
     this.urls = this.getStorage();
-    console.log("get");
+    console.log('get');
   }
  }
 
- public getStorage(): string[]{
-   let localStorageItem = JSON.parse(localStorage.getItem('urls'));
+ public getStorage(): string[] {
+   const localStorageItem = JSON.parse(localStorage.getItem('urls'));
    return localStorageItem == null ? [] : localStorageItem.urls;
  }
 
- private setStorage(urls :string[]): void{
+ private setStorage(urls: string[]): void {
   localStorage.setItem('urls', JSON.stringify({urls: urls}));
  }
 }
