@@ -33,7 +33,7 @@ export class GifComponent implements OnInit {
   } else {
     this.urls = this.getStorageData();
     console.log('get');
-    console.log(Date.now() - Date.parse(timeOfLastRetrieval) + 'seconds elapsed since last API hit');
+    console.log(Date.now() - Date.parse(timeOfLastRetrieval) + ' milliseconds elapsed since last API hit');
   }
  }
 
