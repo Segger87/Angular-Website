@@ -17,14 +17,15 @@ export class GifComponent implements OnInit {
 
  ngOnInit() {
   const setInSessionStorage = this.getStorageData();
-  const timeOfLastRetrieval = this.getStorageTime();
+  const timeOfLastRequest = this.getStorageTime();
 
-  if (setInSessionStorage.length == 0 || Date.now() - Date.parse(timeOfLastRetrieval) > 60000) { //hits api every 60seconds 
+  if (setInSessionStorage.length == 0 || Date.now() - Date.parse(timeOfLastRequest) >= 60000) { //hits api every 60seconds 
     this._gifService.retrieveGifData().subscribe(json => {
       this.urls = [];
       this.time = new Date();
       json.data.forEach(datum => {
         this.urls.push(datum.images.downsized.url);
+        sessionStorage.clear();
         setInSessionStorage.push(datum.images.downsized.url);
         this.setStorage(setInSessionStorage, this.time);
         console.log('set');
@@ -33,7 +34,7 @@ export class GifComponent implements OnInit {
   } else {
     this.urls = this.getStorageData();
     console.log('get');
-    console.log(Date.now() - Date.parse(timeOfLastRetrieval) + ' milliseconds elapsed since last API hit');
+    console.log(Date.now() - Date.parse(timeOfLastRequest) + ' milliseconds elapsed since last API hit');
   }
  }
 
